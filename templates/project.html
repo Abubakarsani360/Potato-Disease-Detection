@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Information - Plant Disease Detection</title>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='potato.jpg') }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .content {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    ul {
+      text-align: left;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+    a:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Project Information - Plant Disease Detection</h1>
+    <p>This project focuses on detecting potato leaf diseases using deep learning techniques. Below are the steps undertaken in this project:</p>
+    <ul>
+      <li><strong>Data Collection:</strong> We collected a dataset of potato leaf images, including healthy leaves and leaves affected by early blight and late blight.</li>
+      <li><strong>Data Preprocessing:</strong> The images were resized to 256x256 pixels and normalized to ensure consistent input to the model.</li>
+      <li><strong>Data Augmentation:</strong> To enhance the dataset, data augmentation techniques like random flipping and rotation were applied to the images.</li>
+      <li><strong>Model Creation:</strong> 
+        <ul>
+          <li><strong>Model Used:</strong> We employed a Convolutional Neural Network (CNN), which is particularly effective for image classification tasks.</li>
+          <li><strong>Technologies:</strong> The model was built using TensorFlow and Keras, powerful libraries for deep learning and neural networks.</li>
+          <li><strong>Architecture:</strong> The CNN consists of multiple convolutional layers to detect features, pooling layers to reduce dimensionality, and dense layers for the final classification.</li>
+        </ul>
+      </li>
+      <li><strong>Model Training:</strong> The model was trained on the preprocessed dataset with an 80-10-10 split for training, validation, and testing data, respectively. The training was performed over 25 epochs with a batch size of 32.</li>
+      <li><strong>Model Evaluation:</strong> The model's performance was evaluated using accuracy and loss metrics on both the training and validation datasets. The final model achieved satisfactory accuracy and was saved for deployment.</li>
+      <li><strong>Deployment:</strong> 
+        <ul>
+          <li>The trained model was integrated into a Flask web application. Users can upload images of potato leaves, and the application will predict the disease and provide a confidence score.</li>
+          <li>The Flask application handles image uploads, pre-processes the images, and uses the trained model to make predictions.</li>
+        </ul>
+      </li>
+      <li><strong>Technologies and Libraries Used:</strong>
+        <ul>
+          <li><strong>Programming Language:</strong> Python</li>
+          <li><strong>Libraries:</strong> TensorFlow, Keras, Flask, NumPy, Pandas, Matplotlib</li>
+          <li><strong>Environment:</strong> Google Colab for training the model, Visual Studio Code for running the Flask application</li>
+        </ul>
+      </li>
+    </ul>
+    <a href="{{ url_for('home') }}" class="btn btn-success">Back to Home</a>
+  </div>
+</body>
+</html>

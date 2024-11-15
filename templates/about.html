@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Potato leaf Disease Detection</title>
+  <style>
+    body {
+      background-image: url("{{ url_for('static', filename='potato.jpg') }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .content {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+    a:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>About Potato Leaf Disease Detection</h1>
+    <p>Potatoes are one of the most important food crops globally, providing essential nutrients to millions of people. However, potato crops are susceptible to various diseases, particularly those affecting the leaves. Early detection and accurate diagnosis of these diseases are crucial for effective management and prevention of significant yield losses.</p>
+    <h2>Common Potato Leaf Diseases</h2>
+    <p>Some of the most common potato leaf diseases include:</p>
+    <ul>
+      <li><strong>Late Blight</strong>: Caused by the pathogen <em>Phytophthora infestans</em>, late blight is infamous for its role in the Irish Potato Famine. It appears as dark, water-soaked lesions on leaves and stems.</li>
+      <li><strong>Early Blight</strong>: Caused by <em>Alternaria solani</em>, early blight presents as small, brown lesions with concentric rings on the leaves.</li>
+      <li><strong>Leaf Roll Virus</strong>: This virus causes leaves to roll upwards, becoming stiff and leathery. It can significantly reduce crop yield and quality.</li>
+      <li><strong>Blackleg</strong>: Caused by <em>Erwinia carotovora</em>, blackleg leads to blackened, decaying stems and yellowing leaves.</li>
+    </ul>
+    <h2>Detection and Diagnosis</h2>
+    <p>Traditional methods of detecting and diagnosing potato leaf diseases include visual inspection by trained agronomists and laboratory testing. However, these methods can be time-consuming, labor-intensive, and prone to human error.</p>
+    <p>With advances in technology, automated detection systems using machine learning and computer vision have become a promising solution. These systems can analyze images of potato leaves to identify disease symptoms accurately and quickly.</p>
+    <h2>Our Project</h2>
+    <p>Our project aims to develop a web application that leverages a pre-trained deep learning model to detect potato leaf diseases from uploaded images. By providing a user-friendly interface, farmers and agronomists can upload images of potato leaves and receive instant diagnoses, helping them to take timely and effective actions to manage crop health.</p>
+    <a href="{{ url_for('home') }}" class="btn btn-success">Back to Home</a>
+  </div>
+</body>
+</html>
